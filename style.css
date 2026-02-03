@@ -1,0 +1,144 @@
+/* Reset básico para garantir consistência */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif; /* Fontes com serifa são ótimas para textos longos */
+    line-height: 1.6; /* Espaçamento entre linhas ideal para leitura */
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+
+.navbar {
+    background-color: #111;
+    padding: 20px; 
+}
+
+/* Estilo específico para o título */
+.navbar h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin: 0; 
+    text-align: center;
+}
+
+.container {
+    max-width: 800px; /* Largura máxima para não cansar a vista */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.Foto_principal {
+    display: flex;
+    flex-direction: column; /* Coloca a imagem em cima e a legenda embaixo */
+    align-items: center;    /* Centraliza os dois horizontalmente */
+    justify-content: center;
+    margin: 40px 0;         /* Espaçamento vertical entre os parágrafos do texto */
+}
+
+.Foto_principal img {
+    max-width: 105%;         /* Ajusta o tamanho da imagem para não ocupar a tela toda */
+    height: auto;
+}
+
+.Foto_principal figcaption {
+    margin-top: 10px;       /* Dá um respiro entre a foto e a fonte */
+    font-style: italic;     /* Estilo comum para fontes de notícias */
+    color: #666;
+}
+
+
+/* Tipografia */
+.titulo-principal {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.meta-dados {
+    font-size: 0.9rem;
+    color: #888;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* Conteúdo Corrido */
+.conteudo-texto p {
+    margin-bottom: 1.5rem; /* Espaço entre parágrafos */
+    font-size: 1.15rem;
+}
+
+.conteudo-texto h3 {
+    margin: 40px;
+    font-size: 1.6rem;
+
+}
+
+footer {
+    background-color: #111; /* Mantendo o padrão do seu header */
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.redes {
+    display: flex;          /* Ativa o layout flexível */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 25px;              /* Cria um espaço uniforme entre os ícones */
+    margin-bottom: 15px;    /* Afasta os ícones do texto de copyright abaixo */
+}
+
+.redes img {
+    width: 32px;            /* Define um tamanho padrão para todos os ícones */
+    height: auto;
+    transition: transform 0.3s ease; /* Prepara uma animação suave */
+    filter: grayscale(100%); /* Opcional: deixa os ícones cinzas para combinar com o tema */
+}
+
+/* Efeito ao passar o mouse */
+.redes img:hover {
+    transform: scale(1.2);   /* O ícone cresce levemente */
+    filter: grayscale(0%);   /* O ícone ganha cor ao passar o mouse */
+}
+
+@media screen and (max-width: 768px) {
+
+    /* 1. Ajustando o Título "Angola Grita" */
+    .navbar h1 {
+        font-size: 1.8rem; /* Reduzimos o tamanho para não quebrar a linha bruscamente */
+        padding: 0 10px;   /* Evita que o texto encoste nas bordas da tela */
+    }
+
+    /* 2. O Container da Notícia */
+    .container {
+        width: 100%;       /* Ocupa a largura total no celular */
+        padding: 15px;     /* Margens internas menores para aproveitar o espaço */
+    }
+
+    /* 3. A Imagem Principal */
+    .Foto_principal img {
+        max-width: 100%;   /* No celular, a imagem deve ocupar 100% da largura disponível */
+        border-radius: 0;  /* Opcional: remover bordas arredondadas em telas pequenas */
+    }
+
+    /* 4. O Rodapé e as Redes Sociais */
+    .redes {
+        gap: 15px;         /* Diminuímos o espaço entre ícones para caberem lado a lado */
+        flex-wrap: wrap;   /* Se houver muitos ícones, eles pulam para a linha de baixo */
+    }
+}
